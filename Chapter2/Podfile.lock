@@ -1,0 +1,16 @@
+PODS:
+  - Katana (0.2.0)
+  - KatanaElements (0.2.0):
+    - Katana (~> 0.2.0)
+
+DEPENDENCIES:
+  - Katana (~> 0.2.0)
+  - KatanaElements (~> 0.2.0)
+
+SPEC CHECKSUMS:
+  Katana: e2180d81c8b1f87b76e46844b48ec1c8fa3e5a19
+  KatanaElements: 5dca51f1b80226e22646468d80b098d939d8256f
+
+PODFILE CHECKSUM: cc50b5a6e477821b64e39775286ff9fd9177706a
+
+COCOAPODS: 1.1.1
