@@ -17,6 +17,8 @@ struct GameCell: NodeDescription, PlasticNodeDescription {
   typealias Keys = ChildrenKeys
   typealias NativeView = UIView
 
+  var props: Props
+
   static func childrenDescriptions(props: GameCell.Props,
                                    state: EmptyState,
                                    update: @escaping (EmptyState) -> (),
