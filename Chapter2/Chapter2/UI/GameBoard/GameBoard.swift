@@ -29,15 +29,21 @@ struct GameBoard: NodeDescription {
     
     return [
       View(props: View.Props.build {
-        $0.backgroundColor = .red
+        $0.backgroundColor = .flatLightGrey()
         $0.frame = props.frame
-      })
+        $0.setKey(Keys.background)
+      }),
+
+      Label(props: .gameBoardLabelProps(content: "Player one: \(props.player1Score)", key: Keys.player1Score, shouldPlay: props.turn == .one)),
+      Label(props: .gameBoardLabelProps(content: "Player two: \(props.player2Score)", key: Keys.player2Score, shouldPlay: props.turn == .two)),
     ]
   }
 }
 
 extension GameBoard {
   enum ChildrenKeys {
+    case background
+    case player1Score, player2Score
   }
 }
 
