@@ -27,7 +27,7 @@ struct GameBoard: NodeDescription {
                                    update: @escaping (StateType) -> (),
                                    dispatch: @escaping StoreDispatch) -> [AnyNodeDescription] {
     
-    return [
+    var children: [AnyNodeDescription] = [
       View(props: View.Props.build {
         $0.backgroundColor = .flatLightGrey()
         $0.frame = props.frame
@@ -37,6 +37,13 @@ struct GameBoard: NodeDescription {
       Label(props: .gameBoardLabelProps(content: "Player one: \(props.player1Score)", key: Keys.player1Score, shouldPlay: props.turn == .one)),
       Label(props: .gameBoardLabelProps(content: "Player two: \(props.player2Score)", key: Keys.player2Score, shouldPlay: props.turn == .two)),
     ]
+
+    if props.isGameFinished {
+      let startButton = Button(props: .startButtonProps(title: "New Game", key: Keys.startButton, didTap: nil))
+      children.append(startButton)
+    }
+
+    return children
   }
 }
 
@@ -44,6 +51,7 @@ extension GameBoard {
   enum ChildrenKeys {
     case background
     case player1Score, player2Score
+    case startButton
   }
 }
 
@@ -97,9 +105,12 @@ extension GameBoard: PlasticReferenceSizeable, PlasticNodeDescription {
     player1Score.setTop(nativeView.top, offset: .scalable(30))
     player1Score.height = .scalable(40)
 
-
     player2Score.fillHorizontally(nativeView, insets: .scalable(0, 15, 0, 15))
     player2Score.top = player1Score.bottom
     player2Score.height = .scalable(40)
+
+    let startButton = views[.startButton]
+    startButton?.asFooter(nativeView, insets: .scalable(0, 10, 10, 10))
+    startButton?.height = .scalable(40)
   }
 }
