@@ -26,8 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let intro = GameBoard(props: GameBoard.Props.build {
       $0.frame = UIScreen.main.bounds
     })
-    
-    self.renderer = Renderer(rootDescription: intro, store: nil)
+
+    let store = Store<ApplicationState>()
+    self.renderer = Renderer(rootDescription: intro, store: store)
     self.renderer?.render(in: view)
     
     return true
