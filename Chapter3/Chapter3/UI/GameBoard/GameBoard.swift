@@ -71,7 +71,7 @@ struct GameBoard: NodeDescription, PlasticReferenceSizeable, PlasticNodeDescript
       let startButton = Button(props: .startButtonProps(
         title: "New Game",
         key: Keys.startButton,
-        didTap: nil
+        didTap: { dispatch(NewGame()) }
         ))
       
       children.append(startButton)
