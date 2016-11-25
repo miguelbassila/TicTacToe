@@ -29,6 +29,14 @@ struct GameBoard: NodeDescription, PlasticReferenceSizeable, PlasticNodeDescript
                                    dispatch: @escaping StoreDispatch) -> [AnyNodeDescription] {
     
     let winningLine = props.winningLine ?? []
+
+    let cellCallback = { (index: Int) in
+      return {
+        if !props.isGameFinished {
+          dispatch(PlayerDidTapCell(payload: index))
+        }
+      }
+    }
     
     var children: [AnyNodeDescription] = [
       View(props: View.Props.build {
@@ -40,23 +48,23 @@ struct GameBoard: NodeDescription, PlasticReferenceSizeable, PlasticNodeDescript
       
       Label(props: .gameBoardLabelProps(content: "Player two: \(props.player2Score)", key: Keys.player2Score, shouldPlay: props.turn == .two)),
       
-      GameCell(props: GameCell.Props(key: Keys.cell1, player: props.board[0], isWinningCell: winningLine.contains(0))),
+      GameCell(props: GameCell.Props(key: Keys.cell1, player: props.board[0], isWinningCell: winningLine.contains(0), didTap: cellCallback(0))),
       
-      GameCell(props: GameCell.Props(key: Keys.cell2, player: props.board[1], isWinningCell: winningLine.contains(1))),
+      GameCell(props: GameCell.Props(key: Keys.cell2, player: props.board[1], isWinningCell: winningLine.contains(1), didTap: cellCallback(1))),
       
-      GameCell(props: GameCell.Props(key: Keys.cell3, player: props.board[2], isWinningCell: winningLine.contains(2))),
+      GameCell(props: GameCell.Props(key: Keys.cell3, player: props.board[2], isWinningCell: winningLine.contains(2), didTap: cellCallback(2))),
       
-      GameCell(props: GameCell.Props(key: Keys.cell4, player: props.board[3], isWinningCell: winningLine.contains(3))),
+      GameCell(props: GameCell.Props(key: Keys.cell4, player: props.board[3], isWinningCell: winningLine.contains(3), didTap: cellCallback(3))),
       
-      GameCell(props: GameCell.Props(key: Keys.cell5, player: props.board[4], isWinningCell: winningLine.contains(4))),
+      GameCell(props: GameCell.Props(key: Keys.cell5, player: props.board[4], isWinningCell: winningLine.contains(4), didTap: cellCallback(4))),
       
-      GameCell(props: GameCell.Props(key: Keys.cell6, player: props.board[5], isWinningCell: winningLine.contains(5))),
+      GameCell(props: GameCell.Props(key: Keys.cell6, player: props.board[5], isWinningCell: winningLine.contains(5), didTap: cellCallback(5))),
       
-      GameCell(props: GameCell.Props(key: Keys.cell7, player: props.board[6], isWinningCell: winningLine.contains(6))),
+      GameCell(props: GameCell.Props(key: Keys.cell7, player: props.board[6], isWinningCell: winningLine.contains(6), didTap: cellCallback(6))),
       
-      GameCell(props: GameCell.Props(key: Keys.cell8, player: props.board[7], isWinningCell: winningLine.contains(7))),
+      GameCell(props: GameCell.Props(key: Keys.cell8, player: props.board[7], isWinningCell: winningLine.contains(7), didTap: cellCallback(7))),
       
-      GameCell(props: GameCell.Props(key: Keys.cell9, player: props.board[8], isWinningCell: winningLine.contains(8))),
+      GameCell(props: GameCell.Props(key: Keys.cell9, player: props.board[8], isWinningCell: winningLine.contains(8), didTap: cellCallback(8))),
     ]
     
     if props.isGameFinished {

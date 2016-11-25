@@ -27,7 +27,7 @@ struct GameCell: NodeDescription, PlasticNodeDescription {
     var children: [AnyNodeDescription] = [
       Button(props: .gameCellButtonProps(
         isWinningCell: props.isWinningCell,
-        didTap: nil,
+        didTap: props.didTap,
         key: Keys.button)
       )
     ]
@@ -66,10 +66,13 @@ extension GameCell {
     
     var player: Player?
     var isWinningCell: Bool
+
+    var didTap: () -> ()
     
-    init(key: Any, player: Player?, isWinningCell: Bool) {
+    init(key: Any, player: Player?, isWinningCell: Bool, didTap: @escaping () -> ()) {
       self.player = player
       self.isWinningCell = isWinningCell
+      self.didTap = didTap
       self.setKey(key)
     }
   }
