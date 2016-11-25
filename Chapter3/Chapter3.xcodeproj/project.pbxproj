@@ -17,6 +17,7 @@
 		A1B722681DDBA846009369B3 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B722671DDBA846009369B3 /* GameCell.swift */; };
 		DAFEA3E82BAC29371127D12E /* Pods_Chapter3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EE75D2A616CB3316645D96 /* Pods_Chapter3.framework */; };
 		FCEEB9FB1DE7CE8B00A05250 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEB9FA1DE7CE8B00A05250 /* ApplicationState.swift */; };
+		FCEEB9FD1DE7D1E400A05250 /* PlayerDidTapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEB9FC1DE7D1E400A05250 /* PlayerDidTapCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A1B722671DDBA846009369B3 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		F7EE75D2A616CB3316645D96 /* Pods_Chapter3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chapter3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEEB9FA1DE7CE8B00A05250 /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		FCEEB9FC1DE7D1E400A05250 /* PlayerDidTapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDidTapCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				A18090FD1DDB0BC6004EC365 /* UI */,
 				A1450DF81DDB0B4D0043ADBB /* AppDelegate.swift */,
 				FCEEB9FA1DE7CE8B00A05250 /* ApplicationState.swift */,
+				FCEEB9FC1DE7D1E400A05250 /* PlayerDidTapCell.swift */,
 				A1450DFF1DDB0B4D0043ADBB /* Assets.xcassets */,
 				A1450E011DDB0B4D0043ADBB /* LaunchScreen.storyboard */,
 				A1450E041DDB0B4D0043ADBB /* Info.plist */,
@@ -250,6 +253,7 @@
 				FCEEB9FB1DE7CE8B00A05250 /* ApplicationState.swift in Sources */,
 				A13F0BA31DDDC3EC003D9E9E /* GameUtils.swift in Sources */,
 				A18091041DDB1079004EC365 /* GameBoard.swift in Sources */,
+				FCEEB9FD1DE7D1E400A05250 /* PlayerDidTapCell.swift in Sources */,
 				A1450DF91DDB0B4D0043ADBB /* AppDelegate.swift in Sources */,
 				A18091021DDB0BF0004EC365 /* UIColor+GameBoard.swift in Sources */,
 				A18091011DDB0BF0004EC365 /* KatanaElements+GameBoard.swift in Sources */,
