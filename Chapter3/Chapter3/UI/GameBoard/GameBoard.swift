@@ -167,3 +167,16 @@ extension GameBoard {
     }
   }
 }
+
+extension GameBoard: ConnectedNodeDescription {
+  typealias StoreState = ApplicationState
+
+  static func connect(props: inout PropsType, to storeState: StoreState) {
+    props.isGameFinished = storeState.isGameFinished
+    props.turn = storeState.turn
+    props.board = storeState.board
+    props.player1Score = storeState.player1Score
+    props.player2Score = storeState.player2Score
+    props.winningLine = storeState.winningLine
+  }
+}
