@@ -16,6 +16,7 @@
 		A18091041DDB1079004EC365 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18091031DDB1079004EC365 /* GameBoard.swift */; };
 		A1B722681DDBA846009369B3 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B722671DDBA846009369B3 /* GameCell.swift */; };
 		DAFEA3E82BAC29371127D12E /* Pods_Chapter3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EE75D2A616CB3316645D96 /* Pods_Chapter3.framework */; };
+		FCEEB9FB1DE7CE8B00A05250 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEB9FA1DE7CE8B00A05250 /* ApplicationState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A18091031DDB1079004EC365 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		A1B722671DDBA846009369B3 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		F7EE75D2A616CB3316645D96 /* Pods_Chapter3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chapter3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCEEB9FA1DE7CE8B00A05250 /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				A13F0BA11DDDC3DD003D9E9E /* Utils */,
 				A18090FD1DDB0BC6004EC365 /* UI */,
 				A1450DF81DDB0B4D0043ADBB /* AppDelegate.swift */,
+				FCEEB9FA1DE7CE8B00A05250 /* ApplicationState.swift */,
 				A1450DFF1DDB0B4D0043ADBB /* Assets.xcassets */,
 				A1450E011DDB0B4D0043ADBB /* LaunchScreen.storyboard */,
 				A1450E041DDB0B4D0043ADBB /* Info.plist */,
@@ -151,7 +154,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Bending Spoons";
 				TargetAttributes = {
 					A1450DF41DDB0B4D0043ADBB = {
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1B722681DDBA846009369B3 /* GameCell.swift in Sources */,
+				FCEEB9FB1DE7CE8B00A05250 /* ApplicationState.swift in Sources */,
 				A13F0BA31DDDC3EC003D9E9E /* GameUtils.swift in Sources */,
 				A18091041DDB1079004EC365 /* GameBoard.swift in Sources */,
 				A1450DF91DDB0B4D0043ADBB /* AppDelegate.swift in Sources */,
@@ -284,6 +288,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -333,6 +338,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -361,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 023E661AE1DBEE0C00916E6F /* Pods-Chapter3.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chapter3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -374,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 939911F0AC4CDA18FF607EF7 /* Pods-Chapter3.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chapter3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
