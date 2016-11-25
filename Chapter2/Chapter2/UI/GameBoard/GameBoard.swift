@@ -79,3 +79,27 @@ extension GameBoard {
     }
   }
 }
+
+extension GameBoard: PlasticReferenceSizeable, PlasticNodeDescription {
+
+  static var referenceSize = CGSize(width: 320, height: 568)
+
+  static func layout(views: ViewsContainer<Keys>, props: PropsType, state: StateType) {
+
+    let nativeView = views.nativeView
+    let player1Score = views[.player1Score]!
+    let player2Score = views[.player2Score]!
+    let background = views[.background]!
+
+    background.fill(nativeView)
+
+    player1Score.fillHorizontally(nativeView, insets: .scalable(0, 15, 0, 15))
+    player1Score.setTop(nativeView.top, offset: .scalable(30))
+    player1Score.height = .scalable(40)
+
+
+    player2Score.fillHorizontally(nativeView, insets: .scalable(0, 15, 0, 15))
+    player2Score.top = player1Score.bottom
+    player2Score.height = .scalable(40)
+  }
+}
